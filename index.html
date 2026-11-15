@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Double Trouble: Bilingual Pretraining Leaves Language-Conditioned Effects in Shared-Language Representations (EMNLP 2026)</title>
+    <meta name="description" content="Adding a second language to pretraining changes how a model represents English concepts, even after we align the English word embeddings of the two models. In all 32 controlled comparisons, bilingual and English-only models disagreed on held-out English concepts more than English-only models trai…" />
+    <meta name="keywords" content="bilingual pretraining, multilingual language models, English representations in multilingual models, embedding alignment, orthogonal Procrustes alignment, contextual representations, layer-wise analysis, controlled pretraining experiments, cross-lingual transfer, language-specific representations, representation similarity, BabyBabelLM, semantic axes" />
+    <meta name="author" content="Anjishnu Mukherjee, Ziwei Zhu, Antonios Anastasopoulos" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="canonical" href="https://iamshnoo.github.io/double_trouble/" />
+    <link rel="icon" href="/images/favicon.ico" sizes="32x32" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Anjishnu Mukherjee" />
+    <meta property="og:title" content="Double Trouble: Bilingual Pretraining Leaves Language-Conditioned Effects in Shared-Language Representations" />
+    <meta property="og:description" content="Adding a second language to pretraining changes how a model represents English concepts, even after we align the English word embeddings of the two models. In all 32 controlled comparisons, bilingual and English-only models disagreed on held-out English concepts more than English-only models trai…" />
+    <meta property="og:url" content="https://iamshnoo.github.io/double_trouble/" />
+    <meta property="og:image" content="https://iamshnoo.github.io/double_trouble/figures/fig1-overview-1720.webp" />
+    <meta property="og:image:alt" content="Three-panel diagram. Panel A shows llama icons for an English plus Chinese model, an English-only model and an English plus French model with flags of the eight added languages. Panel B shows Procrustes alignment on shared English anchor words and held-out concepts on semantic axes. Panel C shows &#39;wedding dress&#39; placed at different points between red and white for each model, and a layer-wise mismatch curve." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Double Trouble: Bilingual Pretraining Leaves Language-Conditioned Effects in Shared-Language Representations" />
+    <meta name="twitter:description" content="Adding a second language to pretraining changes how a model represents English concepts, even after we align the English word embeddings of the two models. In all 32 controlled comparisons, bilingual and English-only models disagreed on held-out English concepts more than English-only models trai…" />
+    <meta name="twitter:image" content="https://iamshnoo.github.io/double_trouble/figures/fig1-overview-1720.webp" />
+    <link rel="preload" as="font" href="/fonts/AmazonEmberDisplay_Rg.subset.woff2" type="font/woff2" crossorigin />
+    <script>try{if(localStorage.getItem("theme")==="dark"||new URLSearchParams(location.search).get("theme")==="dark")document.documentElement.dataset.theme="dark"}catch(e){}</script>
+    <link rel="stylesheet" href="/dist/paper.min.css?v=cfe4b6ffe2" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ScholarlyArticle","@id":"https://iamshnoo.github.io/double_trouble/#paper","headline":"Double Trouble: Bilingual Pretraining Leaves Language-Conditioned Effects in Shared-Language Representations","name":"Double Trouble: Bilingual Pretraining Leaves Language-Conditioned Effects in Shared-Language Representations","url":"https://iamshnoo.github.io/double_trouble/","abstract":"A concept can carry different associations across languages, while modern language models learn English alongside many other languages during pretraining. Yet comparisons among existing models cannot easily isolate how any one language changes the way these models represent English concepts because their training corpora, compute, architectures, and random seeds all differ. We study this question through a controlled experiment with 40 matched 310M-parameter decoder-only models that share an architecture, tokenizer, training recipe, and English data source. Each bilingual condition adds one of eight languages, while four experimental comparisons separately account for English exposure, total training, and English-document overlap. We align each model pair using 3,000 common English words, then measure where 1,000 held-out English concepts fall along 50 fixed semantic contrasts, such as red versus white. Across 32 experimental comparisons, English concept positions differ more between bilingual and English-only conditions than between English-only runs with different random seeds. These differences are larger in contextual states than in token embeddings and peak in middle layers. The language learned alongside English can therefore change how a model represents English concepts even when its English input representations are explicitly aligned.","description":"Adding a second language to pretraining changes how a model represents English concepts, even after we align the English word embeddings of the two models. In all 32 controlled comparisons, bilingual and English-only models disagreed on held-out English concepts more than English-only models trained with different random seeds.","keywords":"bilingual pretraining, multilingual language models, English representations in multilingual models, embedding alignment, orthogonal Procrustes alignment, contextual representations, layer-wise analysis, controlled pretraining experiments, cross-lingual transfer, language-specific representations, representation similarity, BabyBabelLM, semantic axes","about":[{"@type":"Thing","name":"bilingual pretraining"},{"@type":"Thing","name":"multilingual language models"},{"@type":"Thing","name":"English representations in multilingual models"},{"@type":"Thing","name":"embedding alignment"},{"@type":"Thing","name":"orthogonal Procrustes alignment"},{"@type":"Thing","name":"contextual representations"}],"author":[{"@type":"Person","@id":"https://iamshnoo.github.io/#person","name":"Anjishnu Mukherjee","url":"https://iamshnoo.github.io/"},{"@type":"Person","name":"Ziwei Zhu","url":"https://zziwei.github.io/"},{"@type":"Person","name":"Antonios Anastasopoulos","url":"https://antonisa.github.io/"}],"datePublished":"2026","isPartOf":{"@type":"PublicationEvent","name":"Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP 2026)"},"publisher":{"@type":"Organization","name":"Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP 2026)"},"image":"https://iamshnoo.github.io/double_trouble/figures/fig1-overview-1720.webp","identifier":[{"@type":"PropertyValue","propertyID":"arXiv","value":"2608.26576"},{"@type":"PropertyValue","propertyID":"DOI","value":"10.18653/2026.emnlp-main.2062"},{"@type":"PropertyValue","propertyID":"ACL Anthology","value":"2026.emnlp-main.2062"}],"sameAs":["https://aclanthology.org/2026.emnlp-main.2062.pdf","https://arxiv.org/abs/2608.26576","https://aclanthology.org/2026.emnlp-main.2062/"],"workExample":{"@type":"SoftwareSourceCode","codeRepository":"https://github.com/iamshnoo/bli"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Anjishnu Mukherjee","item":"https://iamshnoo.github.io/"},{"@type":"ListItem","position":2,"name":"Double Trouble","item":"https://iamshnoo.github.io/double_trouble/"}]}]}</script>
+  </head>
+  <body class="topic-training-data" data-paper-id="double-trouble">
+    <a class="skip-link" href="#content">Skip to main content</a>
+    <header class="site-header">
+      <a class="home-link" href="https://iamshnoo.github.io/">Anjishnu Mukherjee</a>
+      <button class="theme-btn" type="button" aria-pressed="false" aria-label="Switch to dark mode">
+        <svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+    </header>
+    <main id="content">
+      <article>
+        <header class="paper-head">
+          <p class="venue-line"><span class="venue-tag">EMNLP 2026 (Main)</span><span class="badge badge-award">Outstanding Paper Award</span></p>
+          <h1>Double Trouble: Bilingual Pretraining Leaves Language-Conditioned Effects in Shared-Language Representations</h1>
+          <p class="authors"><a class="me" href="https://iamshnoo.github.io/">Anjishnu Mukherjee</a>, <a href="https://zziwei.github.io/">Ziwei Zhu</a>, <a href="https://antonisa.github.io/">Antonios Anastasopoulos</a></p>
+          <p class="affiliations">George Mason University</p>
+          
+          <ul class="paper-links" aria-label="Paper links"><li><a href="https://aclanthology.org/2026.emnlp-main.2062.pdf"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>Paper</a></li><li><a href="https://arxiv.org/abs/2608.26576"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>arXiv</a></li><li><a href="https://aclanthology.org/2026.emnlp-main.2062/"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>ACL Anthology</a></li><li><a href="https://github.com/iamshnoo/bli"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>Code</a></li><li><a href="https://huggingface.co/iamshnoo"><svg aria-hidden="true" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5"/><path d="M3 12c0 1.7 4 3 9 3s9-1.3 9-3"/></svg>Models</a></li><li><a href="#citation"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 21c3 0 7-1 7-8V5H3v8h4"/><path d="M14 21c3 0 7-1 7-8V5h-7v8h4"/></svg>BibTeX</a></li></ul>
+        </header>
+
+        <div class="summary">
+          <p class="question">If a language model learns a second language alongside English, does its representation of English concepts change?</p>
+          <p class="tldr">Adding a second language to pretraining changes how a model represents English concepts, even after we align the English word embeddings of the two models. In all 32 controlled comparisons, bilingual and English-only models disagreed on held-out English concepts more than English-only models trained with different random seeds.</p>
+        </div>
+
+        <figure class="teaser">
+        <picture><source type="image/avif" srcset="figures/fig1-overview-640.avif 640w, figures/fig1-overview-1280.avif 1280w, figures/fig1-overview-1720.avif 1720w" sizes="(max-width: 892px) calc(100vw - 32px), 860px" /><img src="figures/fig1-overview-640.webp" srcset="figures/fig1-overview-640.webp 640w, figures/fig1-overview-1280.webp 1280w, figures/fig1-overview-1720.webp 1720w" sizes="(max-width: 892px) calc(100vw - 32px), 860px" width="1720" height="2166" alt="Three-panel diagram. Panel A shows llama icons for an English plus Chinese model, an English-only model and an English plus French model with flags of the eight added languages. Panel B shows Procrustes alignment on shared English anchor words and held-out concepts on semantic axes. Panel C shows &#39;wedding dress&#39; placed at different points between red and white for each model, and a layer-wise mismatch curve." fetchpriority="high" decoding="async" /></picture>
+        <figcaption>Matched English-only and bilingual models are aligned on 3,000 common English words, then compared on 1,000 held-out English concepts along 50 semantic contrasts.</figcaption>
+      </figure>
+
+        <section aria-labelledby="findings-title">
+          <h2 id="findings-title">Key findings</h2>
+          <ul class="findings">
+            <li><strong>The effect survives four training controls.</strong> We matched either English exposure or total training steps, with shared or separate English documents. The median contextual difference stayed above English-only seed variation in all four comparisons, between 0.16 and 0.53, so less English, more training or reused English text cannot explain the difference. <span class="source">(Table 1 and Figure 3)</span></li>
+            <li><strong>Aligned embeddings hide contextual differences.</strong> Across sixteen shared-document comparisons, the seed-corrected disagreement along the 50 semantic contrasts is 0.014 for token embeddings and 0.386 for contextual states under an orthogonal alignment. A more flexible affine alignment still leaves the contextual value at 0.580. <span class="source">(Table 2, Section 4.4)</span></li>
+            <li><strong>The difference peaks in the middle layers.</strong> When we fit a separate alignment at each of the 12 transformer layers, the average difference is small at the input, rises through the middle layers and falls in the final layers. The contextual difference is already present at the first saved checkpoint, 500 steps into training, and remains through 3,000 steps. <span class="source">(Figure 6, Section 4.3; Figure 7, Section 4.4)</span></li>
+            <li><strong>The direction depends on the second language.</strong> The same English concept can move toward opposite ends of a contrast depending on the language learned with English. The paper shows twelve such reversals across the eight added languages, including &#39;wedding dress&#39; on the white versus red contrast. <span class="source">(Figure 2)</span></li>
+          </ul>
+        </section>
+
+        <figure>
+        <picture><source type="image/avif" srcset="figures/fig2-signed-axis-shifts-640.avif 640w, figures/fig2-signed-axis-shifts-1280.avif 1280w, figures/fig2-signed-axis-shifts-1720.avif 1720w" sizes="(max-width: 652px) calc(100vw - 32px), 620px" /><img src="figures/fig2-signed-axis-shifts-640.webp" srcset="figures/fig2-signed-axis-shifts-640.webp 640w, figures/fig2-signed-axis-shifts-1280.webp 1280w, figures/fig2-signed-axis-shifts-1720.webp 1720w" sizes="(max-width: 652px) calc(100vw - 32px), 620px" width="1720" height="1257" alt="Dot plot with twelve rows such as wedding dress (white to red), prophet (fasting to feasting) and meal (clan to individual). Each row has eight colored points for Chinese, French, Persian, Dutch, Ukrainian, Bulgarian, Indonesian and German, spread on both sides of a dashed English-only reference line." loading="lazy" decoding="async" /></picture>
+        <figcaption>For twelve English concepts, the eight bilingual models shift in different directions along the same contrast relative to the English-only model.</figcaption>
+      </figure>
+        <figure>
+        <picture><source type="image/avif" srcset="figures/fig3-training-controls-640.avif 640w, figures/fig3-training-controls-1280.avif 1280w, figures/fig3-training-controls-1720.avif 1720w" sizes="(max-width: 652px) calc(100vw - 32px), 620px" /><img src="figures/fig3-training-controls-640.webp" srcset="figures/fig3-training-controls-640.webp 640w, figures/fig3-training-controls-1280.webp 1280w, figures/fig3-training-controls-1720.webp 1720w" sizes="(max-width: 652px) calc(100vw - 32px), 620px" width="1720" height="902" alt="Line and scatter plot of contextual delta D-axis for four conditions: same English exposure with shared or separate documents, and same total training steps with shared or separate documents. Each colored point is one added language. The median line reads 0.16, 0.18, 0.53 and 0.32, all above a dashed zero line." loading="lazy" decoding="async" /></picture>
+        <figcaption>The contextual difference stays above English-only seed variation (the zero line) in all four training comparisons.</figcaption>
+      </figure>
+        <figure>
+        <picture><source type="image/avif" srcset="figures/fig6a-layerwise-640.avif 640w, figures/fig6a-layerwise-1280.avif 1280w, figures/fig6a-layerwise-1720.avif 1720w" sizes="(max-width: 652px) calc(100vw - 32px), 620px" /><img src="figures/fig6a-layerwise-640.webp" srcset="figures/fig6a-layerwise-640.webp 640w, figures/fig6a-layerwise-1280.webp 1280w, figures/fig6a-layerwise-1720.webp 1720w" sizes="(max-width: 652px) calc(100vw - 32px), 620px" width="1720" height="1325" alt="Line chart of normalized contextual D-axis against transformer layer from 0 to 12. Thin colored lines for the eight added languages and a dark mean line rise steeply after the input layer, peak near layer 5 with a &#39;peak&#39; label, and decline in later layers." loading="lazy" decoding="async" /></picture>
+        <figcaption>Disagreement on English concepts is near zero at the aligned input, peaks around the middle of the 12-layer model and declines toward the output.</figcaption>
+      </figure>
+
+        <section class="setup" aria-labelledby="setup-title">
+          <h2 id="setup-title">What we did</h2>
+          <p>We trained 40 decoder-only models with about 310M parameters each, all with the same 12-layer architecture, tokenizer, training recipe and data source (BabyBabelLM). The bilingual models pair English with Chinese, French, Persian, Dutch, Ukrainian, Bulgarian, Indonesian or German, and English-only runs with different seeds give the reference for ordinary training variation. We align model pairs with orthogonal Procrustes on 3,000 common English words and compare them on 1,000 held-out English concepts along 50 fixed semantic contrasts in nine themes, with 100 physical terms as negative controls.</p>
+        </section>
+
+        <section class="abstract" aria-labelledby="abstract-title">
+          <h2 id="abstract-title">Abstract</h2>
+          <p>A concept can carry different associations across languages, while modern language models learn English alongside many other languages during pretraining. Yet comparisons among existing models cannot easily isolate how any one language changes the way these models represent English concepts because their training corpora, compute, architectures, and random seeds all differ. We study this question through a controlled experiment with 40 matched 310M-parameter decoder-only models that share an architecture, tokenizer, training recipe, and English data source. Each bilingual condition adds one of eight languages, while four experimental comparisons separately account for English exposure, total training, and English-document overlap. We align each model pair using 3,000 common English words, then measure where 1,000 held-out English concepts fall along 50 fixed semantic contrasts, such as red versus white. Across 32 experimental comparisons, English concept positions differ more between bilingual and English-only conditions than between English-only runs with different random seeds. These differences are larger in contextual states than in token embeddings and peak in middle layers. The language learned alongside English can therefore change how a model represents English concepts even when its English input representations are explicitly aligned.</p>
+        </section>
+
+        <section class="bibtex" id="citation" aria-labelledby="citation-title">
+          <h2 id="citation-title">Citation</h2>
+          <div class="bibtex">
+            <button class="copy-btn" type="button">Copy</button>
+            <pre><code>@inproceedings{mukherjee-etal-2026-double,
+    title = &quot;Double Trouble: Bilingual Pretraining Leaves Language-Conditioned Effects in Shared-Language Representations&quot;,
+    author = &quot;Mukherjee, Anjishnu  and
+      Zhu, Ziwei  and
+      Anastasopoulos, Antonios&quot;,
+    editor = &quot;Lee, Hung-Yi  and
+      Dev, Sunipa  and
+      Li, Junyi Jessy  and
+      Elliott, Desmond&quot;,
+    booktitle = &quot;Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing&quot;,
+    month = oct,
+    year = &quot;2026&quot;,
+    address = &quot;Budapest, Hungary&quot;,
+    publisher = &quot;Association for Computational Linguistics&quot;,
+    url = &quot;https://aclanthology.org/2026.emnlp-main.2062/&quot;,
+    doi = &quot;10.18653/2026.emnlp-main.2062&quot;,
+    pages = &quot;46953--46977&quot;,
+    ISBN = &quot;979-8-89176-459-0&quot;
+}</code></pre>
+          </div>
+        </section>
+
+        <section class="related" aria-labelledby="related-title">
+          <h2 id="related-title">Related work on cultural knowledge from training data</h2>
+          <ul>
+            <li><a href="https://iamshnoo.github.io/metadata_localization/">MAPLE: Metadata Conditioned LLM Pretraining for Locale-Aware Question Answering</a> <span class="venue">EMNLP 2026 (Main)</span></li>
+            <li><a href="https://iamshnoo.github.io/global_gallery/">Global Gallery: The Fine Art of Painting Culture Portraits through Multilingual Instruction Tuning</a> <span class="venue">NAACL 2024 (Main)</span></li>
+          </ul>
+        </section>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <p>Double Trouble is part of <a href="https://iamshnoo.github.io/">Anjishnu Mukherjee</a>’s research on multilingual and multicultural language models at George Mason University.</p>
+    </footer>
+    <script>window.__SITE_CONFIG__={"siteUrl":"https://iamshnoo.github.io/","analytics":{"measurementId":"G-SW1PFMHV7X","enabledHosts":["iamshnoo.github.io"],"debug":false}};</script>
+    <script type="module" src="/dist/paper.min.js?v=cfe4b6ffe2"></script>
+  </body>
+</html>
